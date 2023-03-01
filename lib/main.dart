@@ -12,6 +12,11 @@ void main() {
   runApp(const MainApp());
 }
 
+final List<String> imgList = [
+  'build/flutter_assets/skillbox.svg',
+  'build/flutter_assets/Google-flutter-logo.svg'
+];
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -27,14 +32,13 @@ class MainApp extends StatelessWidget {
               // SvgPicture.asset('build/flutter_assets/skillbox.svg'),
               CarouselSlider(
                 options: CarouselOptions(height: 200.0),
-                items: [1, 2, 3].map((i) {
+                items: imgList.map((i) {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
                           width: MediaQuery.of(context).size.width,
                           margin: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: SvgPicture.asset(
-                              'build/flutter_assets/skillbox.svg'));
+                          child: SvgPicture.asset(i));
                     },
                   );
                 }).toList(),
