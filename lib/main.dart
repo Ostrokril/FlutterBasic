@@ -4,9 +4,12 @@
 // С помощью виджета загрузите изображение из сети и отобразите это изображение на экране.
 //
 
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+// Package imports:
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,12 +27,14 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: const Center(
+            child: Text("Flutter Work"),
+          ),
+        ),
         body: Center(
           child: Column(
             children: <Widget>[
-              // Image.asset('build/flutter_assets/gsmp-amur-tiger-wz-m.jpg'),
-              // SvgPicture.asset('build/flutter_assets/skillbox.svg'),
               CarouselSlider(
                 options: CarouselOptions(height: 200.0),
                 items: imgList.map((i) {
