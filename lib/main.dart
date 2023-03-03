@@ -16,8 +16,8 @@ void main() {
 }
 
 final List<String> imgList = [
-  'build/flutter_assets/skillbox.svg',
-  'build/flutter_assets/Google-flutter-logo.svg'
+  'assets/skillbox.svg',
+  'assets/Google-flutter-logo.svg'
 ];
 
 class MainApp extends StatelessWidget {
